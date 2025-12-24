@@ -52,11 +52,11 @@ const Index = () => {
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <h1 className="font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
-              Оптовые леденцы ЧупаЧупс с вашим дизайном — от 1000 шт.
+              ЧУПАЧУПС
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/90 font-light">
-              Скидки до 15% для партнеров • Доставка по РФ и СНГ за 2–5 дней • Гарантия возврата при задержке
+            <p className="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto">
+              Откройте для себя леденцы, которые отличаются высоким качеством и неповторимым вкусом. Рассчитайте заказ прямо сейчас!
             </p>
 
             <Button 
