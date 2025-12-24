@@ -195,6 +195,117 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-center mb-4 text-secondary">
+            Наши вкусы
+          </h2>
+          <p className="text-center text-muted-foreground text-lg mb-12">
+            Выберите из 11 уникальных вкусов или закажите индивидуальный микс
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+            {[
+              {
+                name: 'Клубника',
+                description: 'Сладкий и сочный вкус спелой клубники',
+                color: 'bg-red-500',
+                emoji: '🍓'
+              },
+              {
+                name: 'Апельсин',
+                description: 'Яркий цитрусовый вкус с освежающими нотками',
+                color: 'bg-orange-500',
+                emoji: '🍊'
+              },
+              {
+                name: 'Кола',
+                description: 'Классический вкус любимого газированного напитка',
+                color: 'bg-amber-800',
+                emoji: '🥤'
+              },
+              {
+                name: 'Вишня',
+                description: 'Насыщенный вкус спелой вишни с легкой кислинкой',
+                color: 'bg-red-700',
+                emoji: '🍒'
+              },
+              {
+                name: 'Яблоко',
+                description: 'Свежий вкус зеленого яблока',
+                color: 'bg-green-500',
+                emoji: '🍏'
+              },
+              {
+                name: 'Виноград',
+                description: 'Сладкий виноградный вкус с фруктовыми нотами',
+                color: 'bg-purple-600',
+                emoji: '🍇'
+              },
+              {
+                name: 'Малина',
+                description: 'Нежный ягодный вкус с приятной сладостью',
+                color: 'bg-pink-500',
+                emoji: '🫐'
+              },
+              {
+                name: 'Лимон',
+                description: 'Кисло-сладкий цитрусовый вкус',
+                color: 'bg-yellow-400',
+                emoji: '🍋'
+              },
+              {
+                name: 'Арбуз',
+                description: 'Освежающий летний вкус сочного арбуза',
+                color: 'bg-green-400',
+                emoji: '🍉'
+              },
+              {
+                name: 'Персик',
+                description: 'Мягкий и бархатистый вкус спелого персика',
+                color: 'bg-orange-300',
+                emoji: '🍑'
+              },
+              {
+                name: 'Новогодний пунш',
+                description: 'Праздничный микс из корицы, апельсина и клюквы',
+                color: 'bg-gradient-to-br from-red-600 to-green-600',
+                emoji: '🎄',
+                isNew: true
+              }
+            ].map((flavor, idx) => (
+              <Card 
+                key={idx} 
+                className="hover:shadow-xl transition-all hover:scale-105 animate-fade-in relative overflow-hidden"
+                style={{ animationDelay: `${idx * 50}ms` }}
+              >
+                {flavor.isNew && (
+                  <Badge className="absolute top-3 right-3 bg-primary z-10">
+                    🎁 Новинка
+                  </Badge>
+                )}
+                <div className={`h-32 ${flavor.color} flex items-center justify-center text-6xl`}>
+                  {flavor.emoji}
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-montserrat text-xl">{flavor.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm">{flavor.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              Заказать индивидуальный микс
+              <Icon name="Sparkles" className="ml-2" size={20} />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-center mb-4 text-secondary">
             Калькулятор доставки
           </h2>
           <p className="text-center text-muted-foreground text-lg mb-12">
