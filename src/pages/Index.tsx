@@ -102,7 +102,7 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-center mb-4 text-secondary">
-            B2B-Программы партнерства
+            Программа лояльности
           </h2>
           <p className="text-center text-muted-foreground text-lg mb-12">
             Выгодные условия для постоянных клиентов
@@ -207,7 +207,7 @@ const Index = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <Label className="text-base mb-2 block">Откуда</Label>
-                    <Input value="Москва (производство)" disabled className="bg-muted" />
+                    <Input value="Волгоград (производство)" disabled className="bg-muted" />
                   </div>
                   <div>
                     <Label className="text-base mb-2 block">Куда</Label>
@@ -316,49 +316,6 @@ const Index = () => {
 
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-center mb-4 text-secondary">
-            Гарантии и доверие
-          </h2>
-          <p className="text-center text-muted-foreground text-lg mb-12">
-            Наши клиенты — наша гордость
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                title: 'Магазин в Москве',
-                result: '+35% к продажам',
-                text: 'После запуска индивидуальной упаковки к 8 марта продажи выросли на треть',
-                icon: 'TrendingUp'
-              },
-              {
-                title: 'ТРЦ в Казани',
-                result: '5 000 шт.',
-                text: 'Успешная пробная партия с логотипом торгового центра',
-                icon: 'ShoppingBag'
-              },
-              {
-                title: 'Ресторан в Ростове',
-                result: 'Постоянный партнер',
-                text: 'Ежемесячные поставки по программе "Сезонный партнер"',
-                icon: 'Utensils'
-              }
-            ].map((review, idx) => (
-              <Card key={idx} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="p-3 bg-primary/10 rounded-full w-fit mb-3">
-                    <Icon name={review.icon} className="text-primary" size={32} />
-                  </div>
-                  <CardTitle className="font-montserrat">{review.title}</CardTitle>
-                  <Badge className="w-fit bg-green-100 text-green-800 hover:bg-green-100">{review.result}</Badge>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{review.text}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
           <div className="max-w-3xl mx-auto">
             <h3 className="font-montserrat font-bold text-3xl text-center mb-8 text-secondary">
               Часто задаваемые вопросы
@@ -408,10 +365,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl">
-              Готовы удвоить продажи конфет в вашем магазине?
+              Готовы сделать заказ сейчас?
             </h2>
             <p className="text-xl text-white/90">
-              Оставьте заявку и получите бесплатный макет дизайна в подарок при заказе до конца месяца
+              Оставьте заявку, и мы свяжемся с вами в течение 30 минут для уточнения деталей
             </p>
 
             <Card className="text-left">
@@ -426,6 +383,10 @@ const Index = () => {
                       <Label htmlFor="final-phone">Телефон</Label>
                       <Input id="final-phone" type="tel" placeholder="+7 (900) 123-45-67" required />
                     </div>
+                  </div>
+                  <div>
+                    <Label htmlFor="final-email">Электронная почта</Label>
+                    <Input id="final-email" type="email" placeholder="example@mail.ru" required />
                   </div>
                   <div>
                     <Label htmlFor="final-region">Регион</Label>
